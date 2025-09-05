@@ -1,7 +1,6 @@
 library(shiny)
 library(bslib)
 
-# UI
 ui <- page_fillable(
 	title = "Motor Trends Car Data",
 	theme = bs_theme(bootswatch = "flatly"),
@@ -17,8 +16,11 @@ ui <- page_fillable(
 	)
 )
 
-# Server
+
 server <- function(input, output, session) {
+	# Pull LFS files before reading data
+	system("git lfs pull")
+
 	data <- readr::read_csv("mtcars3.csv")
 	output$car_table <- renderTable(
 		{
