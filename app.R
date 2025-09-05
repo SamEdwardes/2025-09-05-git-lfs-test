@@ -12,9 +12,6 @@ ui <- page_fillable(
 			class = "bg-primary text-white"
 		),
 		card_body(
-			p(
-				"This dataset contains fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973–74 models)."
-			),
 			tableOutput("car_table")
 		)
 	)
@@ -22,10 +19,10 @@ ui <- page_fillable(
 
 # Server
 server <- function(input, output, session) {
-	data <- readr::read_csv("mtcars2.csv")
+	data <- readr::read_csv("mtcars3.csv")
 	output$car_table <- renderTable(
 		{
-			mtcars
+			data |> dplyr::sample_n(10)
 		},
 		rownames = TRUE
 	)
