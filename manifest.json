@@ -1641,12 +1641,15 @@
   },
   "files": {
     ".gitattributes": {
-      "checksum": "ae08e72c874e5d89121363cde83fccbb"
+      "checksum": "9af929f8ccc60194fe63fe8a759d8bdf"
     },
     "app.R": {
-      "checksum": "0e923e81936f03254d274a5c80814bab"
+      "checksum": "7931dfef0f4b57aceb341807dbdc46d7"
     },
     "mtcars.csv": {
+      "checksum": "895c86b22cf0f2463825acf1eb6da96e"
+    },
+    "mtcars2.csv": {
       "checksum": "895c86b22cf0f2463825acf1eb6da96e"
     }
   },
