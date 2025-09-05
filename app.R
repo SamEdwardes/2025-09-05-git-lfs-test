@@ -22,6 +22,7 @@ ui <- page_fillable(
 
 # Server
 server <- function(input, output, session) {
+	data <- readr::read_csv("mtcars.csv")
 	output$car_table <- renderTable(
 		{
 			mtcars
